@@ -52,21 +52,21 @@ int main(){
 	per_not_and.traintilllearn(trainingset_not_and);
 	
 	cout<<"Inputs 1 & 1  --->";
-	cout<<per_xor_final.predict(vector<double>{per_or.predict(vector<double> {1,1}),
-	 per_not_and.predict(vector<double> {1,1})})<<endl;
+	cout<<per_xor_final.predict(vector<double>{static_cast<double>(per_or.predict(vector<double> {1,1})),
+	 static_cast<double>(per_not_and.predict(vector<double> {1,1}))})<<endl;
 
 
 	cout<<"Inputs 1 & 0  --->";
-	cout<<per_xor_final.predict(vector<double>{per_or.predict(vector<double> {1,0}),
-	 per_not_and.predict(vector<double> {1,0})})<<endl;
+	cout<<per_xor_final.predict(vector<double>{static_cast<double>(per_or.predict(vector<double> {1,0})),
+	 static_cast<double>(per_not_and.predict(vector<double> {1,0}))})<<endl;
 
 	cout<<"Inputs 0 & 1  --->";
-	cout<<per_xor_final.predict(vector<double>{per_or.predict(vector<double> {0,1}),
-	 per_not_and.predict(vector<double> {0,1})})<<endl;
+	cout<<per_xor_final.predict(vector<double>{static_cast<double>(per_or.predict(vector<double> {0,1})),
+	 static_cast<double>(per_not_and.predict(vector<double> {0,1}))})<<endl;
 
 	cout<<"Inputs 0 & 0  --->";
-	cout<<per_xor_final.predict(vector<double>{per_or.predict(vector<double> {0,0}),
-	 per_not_and.predict(vector<double> {0,0})})<<endl;
+	cout<<per_xor_final.predict(vector<double>{static_cast<double>(per_or.predict(vector<double> {0,0})),
+	 static_cast<double>(per_not_and.predict(vector<double> {0,0}))})<<endl;
 	
 	return 0;
 }

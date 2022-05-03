@@ -22,7 +22,7 @@ class Perceptron{
 		double lr; //learning rate
 		vector<double> weights;
 
-		Perceptron(int inputsize, double lr=0.5){
+		Perceptron(int inputsize, double lr=0.2){
 			this->lr = lr;
 			this->init(inputsize);
 		}
@@ -51,7 +51,7 @@ class Perceptron{
 	    	random_device rnd_device;
 			// Specify the engine and distribution.
 			mt19937 mersenne_engine {rnd_device()};  // Generates random integers
-			uniform_int_distribution<int> dist {1, 52};
+			uniform_int_distribution<int> dist {0, 1};
 			auto gen = [&dist, &mersenne_engine](){return dist(mersenne_engine);};
 			
 	
