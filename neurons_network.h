@@ -25,7 +25,7 @@ public:
         for (auto &unit: *this->neuron_network_lays) {
             unit.neurons_in_lay = new vector<Perceptron>(input_neurons,2);
 
-        }
+        }//TODO: напиши нормальную инициализацию
     };
 
     int getLayCount() const {
