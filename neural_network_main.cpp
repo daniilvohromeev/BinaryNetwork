@@ -3,7 +3,8 @@
 #include <cmath>
 #include <ctime>
 #include "stb_image.h"
-
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
 using namespace std;
 // Функция активации (сигмоида).
 double sigmoid(double x) {
